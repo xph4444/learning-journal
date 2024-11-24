@@ -1,0 +1,156 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 60px;
+    padding: 0 1.5em;
+    /* width: 100%; */
+    grid-column: 1/-1;
+}
+
+.nav-logo {
+    display: flex;
+    align-items: center;
+    gap: 0.5em;
+    /* justify-content: center; */
+}
+
+.nav-logo p {
+    font-weight: 700;
+}
+
+.nav-logo img {
+    width: 24px;
+}
+
+.nav-links {
+    display: flex;
+    gap: 3em;
+}
+
+main {
+    /* display: flex; */
+    grid-column: 1/-1;
+}
+
+.hero-post {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    /* 使内容靠近底部 */
+    box-sizing: border-box;
+    width: 100%;
+    aspect-ratio: 1.4 / 1;
+    background-image: url("https://s3-alpha-sig.figma.com/img/c528/e275/f482e6b5ba3982a470eec07267b8d035?Expires=1730678400&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=NPK-d-hnSbHKFdNqvEk-xVlUisuimlRDdnOFXgpbRcEw8WpwWPqS-QjwSqqA2igVZl0T4MP8uAo1661LgSk0TSwqHdlpFdoyspaFiesjAI390IQaucTiiM3CJOTce8UW9enK1b9T~N7zAFLK1ANvcE0IyciYZLua7NJfpE2MZcfnv9zC4YY4H7sAh~CCqN1rS-yGyLk5102grJLzvnSFiSVWemRQ4Q1S~ZkHjo~SBMGOjCyAeq-rvm2wMKOOz5JFXeWIsUJWud74RrZZwoVkoQ6ApF0NyIc7RM7GRonFW08MmGgkJo2yEwD~xvr1uucOoVeJbedbP1EtaXiw1JK9-w__");
+    background-size: cover;
+    /* background-color: rgba(0, 0, 0, 0.8); */
+    /* 黑色，透明度10% */
+    /* background-position: bottom 150px center; */
+    background-position: bottom;
+
+    max-height: 480px;
+    padding: 2em 1.5em;
+
+}
+
+.post-feed {
+    padding: 2em 2em;
+    display: grid;
+    gap: 3em;
+    grid-column: 1/-1;
+
+    /* flex-wrap: wrap; */
+}
+
+.regular-post {
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+    grid-column: span 4;
+    /* flex: 1 240px; */
+}
+
+@media (min-width:480px) {
+    body {
+        grid-template-columns: repeat(8, 1fr);
+    }
+
+}
+
+@media (min-width:768px) {
+    body {
+        grid-template-columns: repeat(12, 1fr);
+    }
+}
+
+
+
+.post-image-container {
+    width: 100%;
+    /* 可以根据需求设置宽度 */
+    aspect-ratio: 3 / 2;
+    /* 设置宽高比为3:2 */
+
+    overflow: hidden;
+    /* 超出部分隐藏 */
+}
+
+.regular-post img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    /* 填满容器，居中裁剪 */
+    object-position: center;
+    /* 居中显示 */
+
+    border-radius: 0.5em;
+}
+
+h3 {
+    font-size: 2rem;
+    line-height: 112.5%;
+    font-weight: 700;
+    margin: 0;
+}
+
+h4 {
+    font-size: 1.5rem;
+    line-height: 112.5%;
+    font-weight: 700;
+    margin: 0;
+}
+
+
+p {
+    line-height: 125%;
+    margin: 0;
+}
+
+.secondary-color {
+    color: #505050;
+}
+
+.text-small {
+    font-size: 0.75rem;
+}
+
+.text-on-reverse {
+    color: white;
+}
+
+
+.text-area {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5em;
+    max-width: 640px;
+}

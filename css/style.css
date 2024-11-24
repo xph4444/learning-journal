@@ -1,0 +1,359 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+}
+
+
+
+
+main {
+    display: flex;
+    flex-direction: column;
+    /* text-align: center; */
+    color: #121212;
+    /* padding: 0 1.5em; */
+    padding-bottom: 1em;
+}
+
+.hero-post {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    /* text-align: left; */
+
+
+    /* 使内容靠近底部 */
+    box-sizing: border-box;
+    width: 100%;
+    aspect-ratio: 1.4 / 1;
+    /* background-image: url("https://images.unsplash.com/photo-1630705605873-5d7776c38d78?q=80&w=2944&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"); */
+    background-size: cover;
+    /* background-position: bottom 150px center; */
+    background-position: bottom;
+
+    max-height: 480px;
+    padding: 2em 1.5em;
+
+}
+
+
+.post-feed,
+.article-section {
+    margin: 1.5em 1.5em 3em;
+
+}
+
+.post-feed {
+    display: grid;
+    gap: 3em;
+    grid-template-columns: repeat(4, 1fr);
+    align-self: center;
+    /* margin: 0 auto; */
+
+    /* flex-wrap: wrap; */
+}
+
+
+
+
+
+.article-section {
+    display: flex;
+    flex-direction: column;
+    gap: 2em;
+    max-width: 720px;
+    /* margin: 1em auto 4em; */
+    align-self: center;
+}
+
+/* 选择article-section内部的article-heading-area子元素 */
+.article-section .article-heading-area {
+    gap: 1em;
+}
+
+.recent-post {
+    text-align: center;
+    margin: 0 auto;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+    /* 继承文本颜色 */
+}
+
+/* .post-feed里面的a占据4列 */
+.post-feed a {
+    grid-column: span 4;
+}
+
+/* 以下写法会不起作用，原因是grid只作用于直接子元素，而非嵌套子元素：
+.post-feed article {
+    grid-column: span 4;
+} */
+
+
+
+.regular-post {
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+    text-align: left;
+
+    /* width: 100%; */
+    /* flex: 1 240px; */
+}
+
+.text-btn {
+    font-size: 1rem;
+    font-weight: bold;
+    text-decoration: underline;
+    padding: 0.25em 0.75em;
+    margin-bottom: 2em;
+    /* box-sizing: border-box; */
+    background: none;
+    border: none;
+    /* align-self: center; */
+    /*如果要居中 */
+
+
+    /* border: 10px solid red; */
+
+
+}
+
+.text-btn:hover {
+    cursor: pointer;
+}
+
+
+
+.post-image-container {
+    width: 100%;
+    /* 可以根据需求设置宽度 */
+    aspect-ratio: 3 / 2;
+    /* 设置宽高比为3:2 */
+
+    overflow: hidden;
+    /* 超出部分隐藏 */
+}
+
+.regular-post img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    /* 填满容器，居中裁剪 */
+    object-position: center;
+    /* 居中显示 */
+
+    border-radius: 0.5em;
+}
+
+.article-heading-area {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5em;
+    max-width: 720px;
+}
+
+
+.article-image {
+    /* width: 100%; */
+    aspect-ratio: 3/2;
+    object-fit: cover;
+    /* object-position: 0 -400px; */
+    overflow: hidden;
+}
+
+
+.avatar-image {
+
+    width: 160px;
+    height: 160px;
+    border-radius: 100%;
+    margin: 2em 0;
+    /* flex-shrink: 0; */
+
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 60px;
+    padding: 0 1.5em;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+/* box-sizing: content-box; 会导致 header 的总宽度超出视口宽度，使右侧的内容（如 nav-links）超出页面范围。 */
+
+
+
+.nav-logo {
+    display: flex;
+    align-items: center;
+    gap: 0.5em;
+    /* justify-content: center; */
+}
+
+.nav-logo p {
+    font-weight: 700;
+}
+
+.nav-logo img {
+    width: 24px;
+}
+
+.nav-links {
+    display: flex;
+    gap: 2em;
+
+}
+
+.hidden {
+    display: none;
+}
+
+
+/* 主要是用来放置hamburgericon，使其在容器内水平垂直居中，并确定宽度 */
+.icon-container {
+    display: flex;
+    /* 使用 flexbox 布局 */
+    justify-content: center;
+    /* 水平居中 */
+    align-items: center;
+    /* 垂直居中 */
+    width: 24px;
+    height: 24px;
+    cursor: pointer;
+}
+
+.icon-container:hover {
+    background-color: #ECECEC;
+    border-radius: 0.25rem;
+}
+
+
+@media (min-width:480px) {
+
+    .hamburger-menu {
+        display: none;
+    }
+
+    .nav-links.hidden {
+        display: flex;
+    }
+
+    .post-feed {
+        grid-template-columns: repeat(8, 1fr);
+        column-gap: 2em;
+    }
+
+    .post-feed,
+    .article-section {
+        margin: 2em 2em 3em;
+    }
+
+}
+
+
+@media (min-width:768px) {
+
+
+    header {
+        height: 72px;
+    }
+
+    .post-feed {
+        grid-template-columns: repeat(12, 1fr);
+        max-width: 960px;
+
+    }
+
+    .article-section {
+        margin-bottom: 6em;
+    }
+
+    .personal-info {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap: 3em;
+    }
+
+}
+
+@media (min-width:1280px) {
+    .hero-post {
+        margin-bottom: 1.5em;
+    }
+
+    .text-btn {
+        margin-bottom: 2.5em;
+    }
+}
+
+
+
+footer {
+    background-color: #202020;
+    /* text-align: center; */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 0.25em;
+    height: 7rem;
+    width: 100%;
+}
+
+
+
+footer p {
+    color: #ECECEC;
+
+}
+
+
+h3 {
+    font-size: 2rem;
+    line-height: 112.5%;
+    font-weight: 700;
+    margin: 0;
+}
+
+h4 {
+    font-size: 1.5rem;
+    line-height: 112.5%;
+    font-weight: 700;
+    margin: 0;
+}
+
+
+p {
+    line-height: 125%;
+    margin: 0;
+}
+
+.align-center {
+    text-align: center;
+    margin-bottom: 2em;
+}
+
+.secondary-color {
+    color: #505050;
+}
+
+.text-small {
+    font-size: 0.75rem;
+}
+
+.text-on-reverse {
+    color: white;
+}
+
+.text-bold {
+    font-weight: 700;
+}

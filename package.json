@@ -7,9 +7,8 @@
     "build": "vite build",
     "preview": "vite preview"
   },
-  "dependencies": {
-    "vite": "latest"
-  },
   "type": "module",
-  "devDependencies": {}
+  "devDependencies": {
+    "vite": "^5.4.11"
+  }
 }

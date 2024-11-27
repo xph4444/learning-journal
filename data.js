@@ -11,7 +11,7 @@ export const articles = [
         date: "Nov 13, 2024",
         summary: "I'm diving into the world of CSS Grid. After mastering Flexbox, I realized how much more control Grid gives when creating complex layouts. This has really enhanced my web design skills.",
         image: "https://images.unsplash.com/photo-1486475554424-2fa50cd59f18?q=80&w=2942&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-        link: "https://www.google.com/"
+        link: "article.html"
     },
     {
         date: "Oct 28, 2024",

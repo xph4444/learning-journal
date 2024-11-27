@@ -12,7 +12,6 @@ export default defineConfig({
 				main: resolve(__dirname, 'index.html'),
 				article: resolve(__dirname, 'article.html'),
 				about: resolve(__dirname, 'about.html'),
-
 			},
 		},
 	}
